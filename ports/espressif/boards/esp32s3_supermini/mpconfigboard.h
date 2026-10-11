@@ -11,7 +11,10 @@
 #define MICROPY_HW_BOARD_NAME       "ESP32-S3 Super Mini"
 #define MICROPY_HW_MCU_NAME         "ESP32S3"
 
-// WS2812 RGB LED on GPIO48 (shared with Red power LED - cannot be used independently)
+// WS2812 RGB LED on GPIO48 (shared with Red power LED - hardware coexists:
+// NeoPixel ignores static DC, Red LED tolerates pulses. Exposed as board.RED_LED
+// and board.NEOPIXEL; cannot use both simultaneously in CircuitPython due to
+// single-pin driver limitation)
 #define MICROPY_HW_NEOPIXEL         (&pin_GPIO48)
 
 // Default I2C pins (using safe GPIO pins)
