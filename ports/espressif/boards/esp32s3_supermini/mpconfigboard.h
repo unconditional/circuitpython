@@ -11,11 +11,8 @@
 #define MICROPY_HW_BOARD_NAME       "ESP32-S3 Super Mini"
 #define MICROPY_HW_MCU_NAME         "ESP32S3"
 
-// WS2812 RGB LED on GPIO48 (shared with Red power LED)
+// WS2812 RGB LED on GPIO48 (shared with Red power LED - cannot be used independently)
 #define MICROPY_HW_NEOPIXEL         (&pin_GPIO48)
-
-// Status LED power control (Red LED shares GPIO48 with NeoPixel)
-#define CIRCUITPY_STATUS_LED_POWER  (&pin_GPIO48)
 
 // Default I2C pins (using safe GPIO pins)
 #define DEFAULT_I2C_BUS_SCL         (&pin_GPIO6)
