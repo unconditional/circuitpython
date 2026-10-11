@@ -70,8 +70,8 @@ static const mp_rom_map_elem_t board_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR_D46), MP_ROM_PTR(&pin_GPIO46) },  // STRAPPING - ROM log/boot mode
     { MP_ROM_QSTR(MP_QSTR_D47), MP_ROM_PTR(&pin_GPIO47) },  // Octal SPI clock (diff)
     { MP_ROM_QSTR(MP_QSTR_D48), MP_ROM_PTR(&pin_GPIO48) },
-    { MP_ROM_QSTR(MP_QSTR_NEOPIXEL), MP_ROM_PTR(&pin_GPIO48) },
-    { MP_ROM_QSTR(MP_QSTR_NEOPIXEL_POWER), MP_ROM_PTR(&pin_GPIO48) },  // Shared with Red LED
+    { MP_ROM_QSTR(MP_QSTR_RED_LED), MP_ROM_PTR(&pin_GPIO48) },  // Red power LED (static DC)
+    { MP_ROM_QSTR(MP_QSTR_NEOPIXEL), MP_ROM_PTR(&pin_GPIO48) },  // WS2812 RGB LED (coexists on same pin)
 
     // I2C aliases for default pins
     { MP_ROM_QSTR(MP_QSTR_SCL), MP_ROM_PTR(&pin_GPIO6) },
